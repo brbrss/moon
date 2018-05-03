@@ -75,7 +75,6 @@ Assets.sndPaths =
         { "key": "tuturu", "path": "sound/effect/tuturu.mp3" },
         
 
-        { "key": "bgm01", "path": "sound/bgm/bgm01.mp3" },
         { "key": "bgm02", "path": "sound/bgm/bgm02.mp3" },
         { "key": "bgm03", "path": "sound/bgm/bgm03.ogg" } // fate
 
