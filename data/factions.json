@@ -1,0 +1,37 @@
+[
+    {
+        "name": "哥哥的后宫",
+        "id": 0,
+        "exists": true,
+        "color":"#0000FF",
+        "money":1000
+    },
+    {
+        "name": "月势力",
+        "id": 1,
+        "exists": true,
+        "color":"#A942DC",
+        "money":1000        
+    },
+    {
+        "name": "未来道具研究所",
+        "id": 2,
+        "exists": true,
+        "color":"#FF0000",
+        "money":1000        
+    },
+    {
+        "name": "反传销协会",
+        "id": 3,
+        "exists": true,
+        "color":"#FFFF00",
+        "money":1000        
+    },
+    {
+        "name": "战车道联盟",
+        "id": 4,
+        "exists": true,
+        "color":"#807020",
+        "money":1000        
+    }
+]

@@ -1,0 +1,92 @@
+[
+    {
+        "id":0,
+        "name":"千叶",
+        "xy":{"x":2,"y":3},
+
+        "factionId":0,
+        "commerce":2200,
+        "manpower":19000,
+        "supplies":50000,
+        "slots":["market","kitchen","workshop",""],
+        "sword":5000,
+        "spear":2000,
+        "bow":3000,
+        "horse":3000
+    },
+    {
+        "id":1,
+        "name":"冬木市",
+        "xy":{"x":36,"y":32},
+
+        "factionId":1,        
+        "commerce":3000,
+        "manpower":500,
+        "supplies":500,        
+        "slots":["","","","","","","",""],
+        "sword":500,
+        "spear":300,
+        "bow":100,
+        "horse":600
+    },
+    {
+        "id":2,
+        "name":"秋叶原",
+        "xy":{"x":20,"y":9},
+
+        "factionId":2,        
+        "commerce":400,
+        "manpower":500,
+        "supplies":100,        
+        "slots":["","","","","","","",""],
+        "sword":200,
+        "spear":100,
+        "bow":0,
+        "horse":0
+    },
+    {
+        "id":3,
+        "name":"见泷原",
+        "xy":{"x":31,"y":10},
+
+        "factionId":3,        
+        "commerce":400,
+        "manpower":500,
+        "supplies":100,        
+        "slots":["","","","","","","",""],
+        "sword":200,
+        "spear":100,
+        "bow":0,
+        "horse":0
+    },
+    {
+        "id":4,
+        "name":"大洗",
+        "xy":{"x":22,"y":22},
+
+        "factionId":4,        
+        "commerce":400,
+        "manpower":500,
+        "supplies":100,        
+        "slots":["","","","","","","",""],
+        "sword":200,
+        "spear":100,
+        "bow":0,
+        "horse":0
+    },
+    {
+        "id":5,
+        "name":"圣葛罗莉安娜",
+        "xy":{"x":9,"y":28},
+
+        "factionId":4,        
+        "commerce":400,
+        "manpower":500,
+        "supplies":100,        
+        "slots":["","","","","","","",""],
+        "sword":200,
+        "spear":100,
+        "bow":0,
+        "horse":0
+    }
+]

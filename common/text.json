@@ -1,0 +1,32 @@
+{
+    "name":"姓名",
+    "gender":"性别",
+    "f":"女",
+    "m":"男",
+
+    "mil":"军事",
+    "dip":"外交",
+    "adm":"行政",
+    "int":"智力",
+
+    "bow":"弓",
+    "spear":"枪",
+    "sword":"剑",
+    "horse":"马",
+    
+    "archer":"弓兵",
+    "spearman":"枪兵",
+    "swordman":"剑兵",
+    "horseman":"骑兵",
+
+    "cityName":"城市",
+    "cityManpower":"兵力",
+    "citySupplies":"军粮",
+    "cityCommerce":"发展",    
+    "cityChar":"人员",
+    
+    "ready":"待命",
+    "finished":"完毕",
+    "commanding":"出征",
+    "unemployed":"在野"
+}

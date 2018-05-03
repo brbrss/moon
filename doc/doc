@@ -1,0 +1,19 @@
+allowed buff methods:
+
+////////
+returns command list:
+////////
+
+beforeAttackTroop(game,troop,buff,defender)
+beforeAttackedByTroop(game,troop,buff,attacker)
+afterAttackTroop(game,troop,buff,defender)
+afterAttackedByTroop(game,troop,biff,attacker)
+afterMove(game,troop,buff,src)
+afterFinish(game,troop,buff)
+
+////////
+returns value
+////////
+
+damageDealt(game,troop,buff,defender)
+damageTaken(game,troop,buff,attacker)

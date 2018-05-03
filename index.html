@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="default.css">
+    <link rel="stylesheet" type="text/css" href="table.css">
+    <link rel="stylesheet" type="text/css" href="panel.css">
+
+    <script src="./js/assetManager.js"></script>
+
+    <script src="./js/assets.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="./js/control.js"></script>
+    <script src="./js/model.js"></script>
+    <script src="./js/effects.js"></script>
+    <script src="./js/algo.js"></script>
+    <script src="./js/command.js"></script>
+    <script src="./js/subcommand.js"></script>
+    <script src="./js/animation.js"></script>
+    <script src="./js/ai.js"></script>
+    <script src="./js/event.js"></script>
+    <script src="./js/special.js"></script>
+
+
+    <script src="./js/ui/ui.js"></script>
+    <script src="./js/ui/table.js"></script>
+    <script src="./js/ui/panel.js"></script>
+    <script src="./js/ui/productionPanel.js"></script>
+    <script src="./js/ui/troopPanel.js"></script>
+    <script src="./js/ui/recruitPanel.js"></script>
+    <script src="./js/ui/troopInfo.js"></script>
+    <script src="./js/ui/moveCharPanel.js"></script>
+    <script src="./js/ui/hirePanel.js"></script>
+    <script src="./js/ui/charInfo.js"></script>
+
+    <script src="./events/common.js"></script>
+</head>
+
+<body>
+    <div id="root" oncontextmenu="return false;">
+        <canvas id="mainCanvas" width=1024 height=576></canvas>
+    </div>
+
+    <!-- templates -->
+    <template id="templateSystem">
+        <div class="transparent">
+            <div class="menu">
+                <button class="systemMenu" name="resume">Resume</button>
+                <button class="systemMenu" name="save">Save</button>
+                <button class="systemMenu" name="exit">Exit</button>
+            </div>
+        </div>
+    </template>
+
+    <template id="templateHud">
+        <div class="top">
+            <span class="factionName"></span>
+            金钱：
+            <span class="money"></span>
+            回合
+            <output class="turn"></output>
+        </div>
+        <div class="system">
+            <button class="system">System</button>
+            <button class="nextTurn">下一回合</button>
+        </div>
+    </template>
+
+    <template id="templateLoad">
+        <div class="transparent">
+            <div class="panel">
+                <label>Select save file: </label>
+                <input type="file" name="fname" accept=".json">
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- city table -->
+    <template id="templateCityTable">
+        <div class="cityTable">
+            <table class="cityTable">
+                <tr class="cityName">
+                    <td colspan=2></td>
+                </tr>
+                <tr class="factionName">
+                    <td colspan=2></td>
+                </tr>
+                <tr class="commerce">
+                    <td class="label">发展</td>
+                    <td class="content"></td>
+                </tr>
+                <tr class="manpower">
+                    <td class="label">兵力</td>
+                    <td class="content"></td>
+                </tr>
+                <tr class="supplies">
+                    <td class="label">军粮</td>
+                    <td class="content"></td>
+                </tr>
+                <tr class="slots">
+                    <td class="label">设施</td>
+                    <td class="content"></td>
+                </tr>
+                <tr class="chars">
+                    <td class="label">待命</td>
+                    <td class="content"></td>
+                </tr>
+                <tr class="bow">
+                    <td class="label">弓</td>
+                    <td class="content"></td>
+                </tr>
+                <tr class="spear">
+                    <td class="label">枪</td>
+                    <td class="content"></td>
+                </tr>
+                <tr class="sword">
+                    <td class="label">剑</td>
+                    <td class="content"></td>
+                </tr>
+                <tr class="horse">
+                    <td class="label">马</td>
+                    <td class="content"></td>
+                </tr>
+            </table>
+        </div>
+    </template>
+    <!-- mouse menu related -->
+
+    <template id="templateCityMenu">
+        <div class="mouseMenu">
+            <button class="mouseMenu" name="internal">内政</button>
+            <button class="mouseMenu" name="hr">人才</button>
+            <button class="mouseMenu" name="campaign">出征</button>
+            <button class="mouseMenu" name="info">情报</button>
+
+            <div class="mouseMenu2" data-name="internal" data-selected="false">
+                <button class="mouseMenu" name="construct" style="display:none">建造</button>
+                <button class="mouseMenu" name="commerce">营业
+                    <span class="tooltip">需要营业场所</span>
+                </button>
+                <button class="mouseMenu" name="supplies">军粮
+                    <span class="tooltip">需要厨房</span>
+                </button>
+                <button class="mouseMenu" name="production">生产</button>
+                <button class="mouseMenu" name="recruit">征兵</button>
+            </div>
+
+            <div class="mouseMenu2" data-name="hr" data-selected="false">
+                <button class="mouseMenu" name="hire">登庸</button>
+                <button class="mouseMenu" name="moveChar">移动</button>
+            </div>
+            <div class="mouseMenu2" data-name="info" data-selected="false">
+                <button class="mouseMenu" name="charInfo">人才</button>
+                <!-- <button class="mouseMenu" name="cityInfo">城市</button> -->
+            </div>
+
+        </div>
+    </template>
+    <template id="templateTroopMenu">
+        <div class="mouseMenu">
+            <button class="mouseMenu" name="move">移动</button>
+            <button class="mouseMenu" name="attack">攻击</button>
+            <button class="mouseMenu" name="wait">待命</button>
+            <button class="mouseMenu" name="info">情报</button>
+        </div>
+    </template>
+
+    <!-- table -->
+    <template id="templateTable">
+        <div class="transparent">
+            <div class="tablePanel">
+                <div class="tableFrame">
+                    <table class="dataTable">
+                        <thead>
+                            <tr class="headerRow"></tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- panel -->
+    <template id="templateYesNo">
+        <div class="divYesNo">
+            <button class="yes">确定</button>
+            <button class="no">取消</button>
+        </div>
+    </template>
+    <template id="templateCommercePanel">
+        <div class="transparent">
+            <div class="panel">
+                <p class="title">营业</p>
+                <input class="chooseChar" src="" value="未选择" type="image" data-char="">
+                <label>花费</label>
+                <label class="cost">0</label>
+                <label>效果</label>
+                <label class="effect">0</label>
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="templateSuppliesPanel">
+        <div class="transparent">
+            <div class="panel">
+                <p class="title">军粮</p>
+                <input class="chooseChar" src="" value="未选择" type="image" data-char="">
+                <label>花费</label>
+                <label class="cost">0</label>
+                <label>效果</label>
+                <label class="effect">0</label>
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="templateRecruitPanel">
+        <div class="transparent">
+            <div class="panel">
+                <p class="title">征兵</p>
+                <input class="chooseChar" src="" value="未选择" type="image" data-char="">
+                <label>花费</label>
+                <label class="cost">0</label>
+                <label>效果</label>
+                <label class="effect">0</label>
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="templateProductionPanel">
+        <div class="transparent">
+            <div class="panel">
+                <p class="title">制造</p>
+                <input class="chooseChar" src="" value="未选择" type="image" data-char="">
+                <div class="inputType"></div>
+                <label>花费</label>
+                <label class="cost">0</label>
+                <label>效果</label>
+                <label class="effect">0</label>
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <!-- construct panel -->
+    <template id="templateInputBuilding">
+        <input class="inputBuilding" name="inputBuilding" value="" id="" type="radio">
+        <label class="labelBuilding" for=""></label>
+    </template>
+
+    <template id="templateConstructPanel">
+        <div class="transparent">
+            <div class="panel">
+                <button class="quit"></button>
+                <div class="buildingSlots"></div>
+                <div class="buildings"></div>
+                <input class="chooseChar" src="" value="未选择" type="image" data-char="">
+                <label>花费</label>
+                <label class="cost">0</label>
+                <p class="desc"></p>
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <!-- troop panel related -->
+    <template id="templateInputUnitType">
+        <input class="inputUnitType" name="inputUnitType" value="" id="" type="radio">
+        <label class="labelUnitType" for=""></label>
+    </template>
+
+    <template id="templateTroopPanel">
+        <div class="transparent">
+            <div class="panel troopPanel" data-char="">
+                <input class="chooseChar" src="" value="未选择" type="image" data-char="">
+                <div class="inputUnitType"></div>
+                <div class="divManpower">
+                    <input type="range" class="manpower" value="1" min="1" max="0"></input>
+                    <input type="number" class="manpower" value="1" min="1" max="0"></input>
+                </div>
+                <div class="divSupplies">
+                    <input type="range" class="supplies" value="1" min="1" max="0"></input>
+                    <input type="number" class="supplies" value="1" min="1" max="0"></input>
+                </div>
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+                <div class="stockpileContainer">
+                    <div class="stockpile stockpileSword">
+                        <span class="desc">剑</span>
+                        <span class="before"></span>
+                        <span class="after"></span>
+                    </div>
+                    <div class="stockpile stockpileSpear">
+                        <span class="desc">枪</span>
+                        <span class="before"></span>
+                        <span class="after"></span>
+                    </div>
+                    <div class="stockpile stockpileBow">
+                        <span class="desc">弓</span>
+                        <span class="before"></span>
+                        <span class="after"></span>
+                    </div>
+                    <div class="stockpile stockpileHorse">
+                        <span class="desc">马</span>
+                        <span class="before"></span>
+                        <span class="after"></span>
+                    </div>
+                </div>
+                <table class="stockpile">
+                    <tr class="manpower">
+                        <td class="desc">兵力</td>
+                        <td class="before"></td>
+                        <td class="after"></td>
+                    </tr>
+                    <tr class="supplies">
+                        <td class="desc">军粮</td>
+                        <td class="before"></td>
+                        <td class="after"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </template>
+
+    <template id="templateBuff">
+        <span class="buff" data-type="">
+            <label class="tooltip"></label>
+        </span>
+    </template>
+
+    <template id="templateTroopInfo">
+        <div class="transparent">
+            <div class="panel">
+                <button class="quit"></button>
+                <figure>
+                    <img class="char">
+                    <figcaption class="charName"></figcaption>
+                </figure>
+                <input type="radio" class="inputUnitType" value=""></input>
+                <label class="inputUnitType"></label>
+                <div class="strength">
+                    <label>兵力</label>
+                    <output></output>
+                </div>
+                <div class="supplies">
+                    <label>军粮</label>
+                    <output></output>
+                </div>
+                <div class="buffs"></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="templateMoveCharPanel">
+        <div class="transparent">
+            <div class="panel">
+
+                <figure class="chooseChar">
+                    <input class="chooseChar" value="" type="image" src="" data-char="">
+                    <figcaption></figcaption>
+                </figure>
+                <div>
+                    <label>目的地</label>
+                    <input type="button" value="未选择" class="destination" data-city=""></input>
+                </div>
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="templateHirePanel">
+        <div class="transparent">
+            <div class="panel">
+                <figure class="chooseChar">
+                    <input class="chooseChar" name="char1" value="" type="image" src="" data-char="">
+                    <figcaption></figcaption>
+                </figure>
+                <figure class="chooseChar">
+                    <input class="chooseChar" name="char2" value="" type="image" src="" data-char="">
+                    <figcaption></figcaption>
+                </figure>
+                <div class="divYesNo">
+                    <button class="yes">确定</button>
+                    <button class="no">取消</button>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="templateCharInfo">
+        <div class="transparent">
+            <div class="panel">
+                <button class="quit"></button>
+                <ul class="leftList">
+
+                </ul>
+                <div class="content">
+
+                    <figure>
+                        <img class="charImg" src="" width=128 height=128>
+                        <figcaption class="charName"></figcaption>
+                    </figure>
+                    <div class="gender">
+                        <label>性别</label>
+                        <output class="gender"></output>
+                    </div>
+                    <div>
+                        <label>势力</label>
+                        <output class="faction"></output>
+                        <label>所在</label>
+                        <output class="location"></output>
+                        <label>状态</label>
+                        <output class="status"></output>
+                    </div>
+                    <fieldset>
+                        <legend>能力</legend>
+                        <label>军事</label>
+                        <output class="mil"></output>
+                        <label>外交</label>
+                        <output class="dip"></output>
+                        <label>行政</label>
+                        <output class="adm"></output>
+                        <label>智力</label>
+                        <output class="int"></output>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template id="templateTransparent">
+        <div class="transparent"></div>
+    </template>
+    <template id="templateDialog">
+        <div class="dialog">
+            <img class="portrait" src="" height=128 width=128>
+            <div class="nameText"></div>
+            <div class="text">
+            </div>
+        </div>
+    </template>
+    <template id="templateCaption">
+        <div class="caption">
+            <div class="text">
+            </div>
+        </div>
+    </template>
+    <template id="templateCgFrame">
+        <div class="cg">
+            <img class="cg" src="" width=100% height=100%>
+        </div>
+    </template>
+    <script>
+        "use strict";
+        {
+            let c = document.querySelector("canvas#mainCanvas");
+            let contex = c.getContext("2d");
+
+            contex.font = "20px Georgia";
+            contex.textAlign = "center";
+            contex.fillText("Loading...", 512, 400);
+            contex.textAlign = "start";
+        }
+
+        var globalGame;
+        {
+            function setGame(t) {
+                console.log("Loading finished.")
+                globalGame = t;
+                changeScene(globalGame,"mainMenu");
+            }
+            preload().then(setGame).catch(_logErr);
+        }
+    </script>
+
+</body>
+
+</html>

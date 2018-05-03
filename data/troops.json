@@ -1,0 +1,186 @@
+[
+    {
+        "id": 0,
+        "factionId": 0,
+        "leaderId": 2,
+        "strength": 1000,
+        "supplies": 1000,
+        "type": "spearman",
+        "xy": {
+            "x": 6,
+            "y": 5
+        },
+        "status": "ready",
+        "buffs": [
+            {
+                "id": "forceback",
+                "type": "special"
+            }
+        ],
+        "target": {
+            "action": "siege",
+            "targetId": 0
+        }
+    },
+    {
+        "id": 1,
+        "factionId": 4,
+        "leaderId": 21,
+        "strength": 1000,
+        "supplies": 1000,
+        "type": "archer",
+        "xy": {
+            "x": 6,
+            "y": 10
+        },
+        "status": "ready",
+        "buffs": [
+            {
+                "id": "suppression",
+                "type": "special"
+            }
+        ],
+        "target": {
+            "action": "siege",
+            "targetId": 0
+        }
+    },
+    {
+        "id": 2,
+        "factionId": 4,
+        "leaderId": 22,
+        "strength": 1000,
+        "supplies": 1000,
+        "type": "horseman",
+        "xy": {
+            "x": 7,
+            "y": 13
+        },
+        "status": "ready",
+        "buffs": [
+            {
+                "id": "charge",
+                "type": "special"
+            }
+        ],
+        "target": {
+            "action": "siege",
+            "targetId": 0
+        }
+    },
+    {
+        "id": 3,
+        "factionId": 4,
+        "leaderId": 23,
+        "strength": 1000,
+        "supplies": 1000,
+        "type": "spearman",
+        "xy": {
+            "x": 9,
+            "y": 8
+        },
+        "status": "ready",
+        "buffs": [
+            {
+                "id": "forceback",
+                "type": "special"
+            }
+        ],
+        "target": {
+            "action": "siege",
+            "targetId": 0
+        }
+    },
+    {
+        "id": 4,
+        "factionId": 4,
+        "leaderId": 24,
+        "strength": 1000,
+        "supplies": 1000,
+        "type": "swordman",
+        "xy": {
+            "x": 5,
+            "y": 8
+        },
+        "status": "ready",
+        "buffs": [
+            {
+                "id": "flanking",
+                "type": "special"
+            }
+        ],
+        "target": {
+            "action": "siege",
+            "targetId": 0
+        }
+    },
+    {
+        "id": 5,
+        "factionId": 0,
+        "leaderId": 3,
+        "strength": 1000,
+        "supplies": 1000,
+        "type": "swordman",
+        "xy": {
+            "x": 7,
+            "y": 4
+        },
+        "status": "ready",
+        "buffs": [
+            {
+                "id": "flanking",
+                "type": "special"
+            }
+        ],
+        "target": {
+            "action": "siege",
+            "targetId": 0
+        }
+    },
+    {
+        "id": 6,
+        "factionId": 0,
+        "leaderId": 4,
+        "strength": 1000,
+        "supplies": 1000,
+        "type": "archer",
+        "xy": {
+            "x": 7,
+            "y": 6
+        },
+        "status": "ready",
+        "buffs": [
+            {
+                "id": "suppression",
+                "type": "special"
+            }
+        ],
+        "target": {
+            "action": "siege",
+            "targetId": 0
+        }
+    },
+    {
+        "id": 7,
+        "factionId": 0,
+        "leaderId": 5,
+        "strength": 1000,
+        "supplies": 1000,
+        "type": "horseman",
+        "xy": {
+            "x": 8,
+            "y": 5
+        },
+        "status": "ready",
+        "buffs": [
+            {
+                "id": "charge",
+                "type": "special"
+            }
+        ],
+        "target": {
+            "action": "siege",
+            "targetId": 0
+        }
+    }
+]

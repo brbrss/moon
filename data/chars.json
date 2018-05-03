@@ -1,0 +1,597 @@
+[
+    {
+        "id":0,
+        "name":"薮猫",
+        "img":"char0",
+
+        "gender":"f",
+        "dip":20,
+        "mil":40,
+        "int":60,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,
+        "location":null,
+        "status":"ready"
+    },
+    {
+        "id":1,
+        "name":"冢本天满",
+        "img":"char1",
+
+        "gender":"f",
+        "dip":20,
+        "mil":40,
+        "int":30,
+        "adm":60,
+        "traits":[],
+        "skills":[],
+
+        "factionId":1,        
+        "location":1,
+        "status":"ready"
+    },
+    {
+        "id":2,
+        "name":"泽村英梨梨",
+        "img":"char2",
+        
+        "gender":"f",
+        "dip":20,
+        "mil":70,
+        "int":30,
+        "adm":60,
+        "traits":[],
+        "skills":[],
+
+        "factionId":0,        
+        "location":0,
+        "status":"commanding"
+    },{
+        "id":3,
+        "name":"高坂丽奈",
+        "img":"char3",
+        
+        "gender":"f",
+        "dip":20,
+        "mil":40,
+        "int":30,
+        "adm":60,
+        "traits":[],
+        "skills":[],
+
+        "factionId":0,        
+        "location":0,
+        "status":"commanding"
+    },{
+        "id":4,
+        "name":"中川夏纪",
+        "img":"char4",
+        "gender":"f",
+        
+        "dip":20,
+        "mil":40,
+        "int":30,
+        "adm":50,
+        "traits":[],
+        "skills":[],
+
+        "factionId":0,        
+        "location":0,
+        "status":"commanding"
+    },{
+        "id":5,
+        "name":"高坂桐乃",
+        "img":"char5",
+        "gender":"f",
+        
+        "dip":30,
+        "mil":70,
+        "int":40,
+        "adm":10,
+        "traits":[],
+        "skills":[],
+
+        "factionId":0,        
+        "location":0,
+        "status":"commanding"
+    },{
+        "id":6,
+        "name":"田村麻奈实",
+        "img":"char6",
+
+        "gender":"f",
+        "dip":50,
+        "mil":70,
+        "int":30,
+        "adm":60,
+        "traits":[],
+        "skills":[],
+
+        "factionId":0,        
+        "location":0,
+        "status":"ready"
+    },{
+        "id":7,
+        "name":"高坂京介",
+        "img":"char7",
+
+        "gender":"m",
+        "dip":50,
+        "mil":50,
+        "int":50,
+        "adm":50,
+        "traits":[],
+        "skills":[],
+
+        "factionId":0,        
+        "location":0,
+        "status":"ready"
+    },{
+        "id":8,
+        "name":"泷本一二三",
+        "img":"char8",
+
+        "gender":"f",
+        "dip":20,
+        "mil":30,
+        "int":40,
+        "adm":50,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":0,
+        "status":"unemployed"
+    },{
+        "id":9,
+        "name":"卫宫士郎",
+        "img":"char9",
+
+        "gender":"m",
+        "dip":50,
+        "mil":80,
+        "int":40,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":1,        
+        "location":1,
+        "status":"ready"
+    },{
+        "id":10,
+        "name":"间桐樱",
+        "img":"char10",
+
+        "gender":"f",
+        "dip":30,
+        "mil":50,
+        "int":50,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":1,        
+        "location":1,
+        "status":"ready"
+    },{
+        "id":11,
+        "name":"远坂凛",
+        "img":"char11",
+
+        "gender":"f",
+        "dip":60,
+        "mil":60,
+        "int":80,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":1,        
+        "location":1,
+        "status":"ready"
+    },{
+        "id":12,
+        "name":"古手梨花",
+        "img":"char12",
+
+        "gender":"f",
+        "dip":1,
+        "mil":1,
+        "int":1,
+        "adm":1,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    },{
+        "id":13,
+        "name":"冈部伦太郎",
+        "img":"char13",
+
+        "gender":"m",
+        "dip":30,
+        "mil":20,
+        "int":70,
+        "adm":10,
+        "traits":[],
+        "skills":[],
+
+        "factionId":2,        
+        "location":2,
+        "status":"ready"
+    },{
+        "id":14,
+        "name":"椎名真由理",
+        "img":"char14",
+
+        "gender":"f",
+        "dip":60,
+        "mil":30,
+        "int":60,
+        "adm":50,
+        "traits":[],
+        "skills":[],
+
+        "factionId":2,        
+        "location":2,
+        "status":"ready"
+    },{
+        "id":15,
+        "name":"桥田至",
+        "img":"char15",
+
+        "gender":"m",
+        "dip":10,
+        "mil":10,
+        "int":80,
+        "adm":30,
+        "traits":[],
+        "skills":[],
+
+        "factionId":2,        
+        "location":2,
+        "status":"ready"
+    },{
+        "id":16,
+        "name":"牧濑红莉栖",
+        "img":"char16",
+
+        "gender":"f",
+        "dip":40,
+        "mil":40,
+        "int":90,
+        "adm":10,
+        "traits":[],
+        "skills":[],
+
+        "factionId":2,        
+        "location":2,
+        "status":"ready"
+    },{
+        "id":17,
+        "name":"鹿目圆",
+        "img":"char17",
+
+        "gender":"f",
+        "dip":90,
+        "mil":70,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":3,        
+        "location":3,
+        "status":"ready"
+    },{
+        "id":18,
+        "name":"晓美焰",
+        "img":"char18",
+
+        "gender":"f",
+        "dip":90,
+        "mil":70,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":3,        
+        "location":3,
+        "status":"ready"
+    },{
+        "id":19,
+        "name":"美树沙耶加",
+        "img":"char19",
+
+        "gender":"f",
+        "dip":90,
+        "mil":70,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":3,        
+        "location":3,
+        "status":"ready"
+    },{
+        "id":20,
+        "name":"佐仓杏子",
+        "img":"char20",
+
+        "gender":"f",
+        "dip":90,
+        "mil":70,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":3,        
+        "location":3,
+        "status":"ready"
+    },{
+        "id":21,
+        "name":"西住美穗",
+        "img":"char21",
+
+        "gender":"f",
+        "dip":60,
+        "mil":90,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":4,        
+        "location":4,
+        "status":"commanding"
+    },{
+        "id":22,
+        "name":"武部沙织",
+        "img":"char22",
+
+        "gender":"f",
+        "dip":60,
+        "mil":90,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":4,        
+        "location":4,
+        "status":"commanding"
+    },{
+        "id":23,
+        "name":"五十铃华",
+        "img":"char23",
+
+        "gender":"f",
+        "dip":60,
+        "mil":90,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":4,        
+        "location":4,
+        "status":"commanding"
+    },{
+        "id":24,
+        "name":"秋山优花里",
+        "img":"char24",
+
+        "gender":"f",
+        "dip":60,
+        "mil":90,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":4,        
+        "location":4,
+        "status":"commanding"
+    },{
+        "id":25,
+        "name":"冷泉麻子",
+        "img":"char25",
+
+        "gender":"f",
+        "dip":60,
+        "mil":90,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":4,        
+        "location":4,
+        "status":"ready"
+    },{
+        "id":26,
+        "name":"大吉岭",
+        "img":"char26",
+
+        "gender":"f",
+        "dip":60,
+        "mil":90,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":4,        
+        "location":5,
+        "status":"ready"
+    },{
+        "id":27,
+        "name":"安丘比",
+        "img":"char27",
+
+        "gender":"f",
+        "dip":60,
+        "mil":90,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":4,        
+        "location":5,
+        "status":"ready"
+    },{
+        "id":28,
+        "name":"西住真穗",
+        "img":"char28",
+
+        "gender":"f",
+        "dip":60,
+        "mil":90,
+        "int":70,
+        "adm":70,
+        "traits":[],
+        "skills":[],
+
+        "factionId":4,        
+        "location":5,
+        "status":"ready"
+    },{
+        "id":29,
+        "name":"大表哥",
+        "img":"char29",
+
+        "gender":"m",
+        "dip":10,
+        "mil":10,
+        "int":10,
+        "adm":10,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    },{
+        "id":30,
+        "name":"Saber",
+        "img":"char30",
+
+        "gender":"f",
+        "dip":90,
+        "mil":90,
+        "int":90,
+        "adm":90,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    },{
+        "id":31,
+        "name":"Archer",
+        "img":"char31",
+
+        "gender":"m",
+        "dip":90,
+        "mil":90,
+        "int":90,
+        "adm":90,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    },{
+        "id":32,
+        "name":"Lancer",
+        "img":"char32",
+
+        "gender":"m",
+        "dip":90,
+        "mil":90,
+        "int":90,
+        "adm":90,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    },{
+        "id":33,
+        "name":"Rider",
+        "img":"char33",
+
+        "gender":"f",
+        "dip":90,
+        "mil":90,
+        "int":90,
+        "adm":90,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    },{
+        "id":34,
+        "name":"Caster",
+        "img":"char34",
+
+        "gender":"f",
+        "dip":90,
+        "mil":90,
+        "int":90,
+        "adm":90,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    },{
+        "id":35,
+        "name":"Assasin",
+        "img":"char35",
+
+        "gender":"m",
+        "dip":90,
+        "mil":90,
+        "int":90,
+        "adm":90,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    },{
+        "id":36,
+        "name":"Berserker",
+        "img":"char36",
+
+        "gender":"m",
+        "dip":90,
+        "mil":90,
+        "int":90,
+        "adm":90,
+        "traits":[],
+        "skills":[],
+
+        "factionId":null,        
+        "location":null,
+        "status":"none"
+    }
+]

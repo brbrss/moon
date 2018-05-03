@@ -1,0 +1,42 @@
+[
+    {
+        "id": "swordman",
+        "name":"swordman",
+        "range": 1,
+        "movement": 6,
+        "baseAttack":80,
+        "baseDefence":80,
+        "special": "flanking",
+        "weapon":"sword"
+    },
+    {
+        "id": "spearman",
+        "name": "spearman",
+        "range": 1,
+        "movement": 6,
+        "baseAttack":70,
+        "baseDefence":75,
+        "special": "forceback",
+        "weapon":"spear"        
+    },
+    {
+        "id": "archer",
+        "name": "archer",
+        "range": 4,
+        "movement": 5,
+        "baseAttack":75,
+        "baseDefence":65,
+        "special": "suppression",
+        "weapon":"bow"        
+    },
+    {
+        "id": "horseman",
+        "name": "horseman",
+        "range": 1,
+        "movement": 9,
+        "baseAttack":95,
+        "baseDefence":70,
+        "special": "charge",
+        "weapon":"horse"
+    }
+]

@@ -1,0 +1,21 @@
+[
+    {
+        "id":"market",
+        "name":"market",
+        "cost":200,
+        "desc":"desc market"
+    },
+    {
+        "id":"kitchen",
+        "name":"kitchen",
+        "cost":100,
+        "desc":"desc kitchen"
+    },
+    {
+        "id":"workshop",
+        "name":"workshop",
+        "cost":100,
+        "desc":"desc workshop"
+    }
+]
+

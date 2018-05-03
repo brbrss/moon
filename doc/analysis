@@ -1,0 +1,15 @@
+Offense x
+Defense y
+
+Offense outputs at rate u.
+Defense outputs at rate v.
+
+dx/dt = -vy
+dy/dt = -ux
+
+Lanchester square law
+
+c = vy^2 - ux^2
+x = 0  =>  C = vy^2
+y = sqrt(c/v)
+damage = y0 - sqrt(c/v)
